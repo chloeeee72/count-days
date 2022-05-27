@@ -1,0 +1,37 @@
+{
+  "name": "count-days",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "description": "js count days",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@typescript-eslint/parser": "^4.0.1",
+    "eslint": "^7.8.0"
+  },
+  "keywords": [
+    "hexo",
+    "hexo-img-beautify"
+  ],
+  "author": "chloe",
+  "license": "MIT",
+  "directories": {
+    "lib": "lib"
+  },
+  "bugs": {
+    "url": "https://github.com/chloeeee72/count-days"
+  },
+  "homepage": "https://github.com/chloeeee72/count-days",
+  "dependencies": {
+    "dayjs": "^1.11.2"
+  }
+}
