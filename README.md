@@ -2,6 +2,14 @@
 
 Put a Array with multiple start times and end times, return the total number of days
 
+![npm](https://img.shields.io/npm/v/count-days.svg) ![npm](https://img.shields.io/npm/l/count-days.svg)
+
+## Link
+
+npm: [click to check](https://www.npmjs.com/package/count-days)
+
+github: [click to check](https://www.npmjs.com/package/count-days)
+
 ## How to use
 ### Installation
 
