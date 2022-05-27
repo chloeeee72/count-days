@@ -1,6 +1,6 @@
 {
   "name": "count-days",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "lib/index.js",
   "description": "js count days",
   "scripts": {
@@ -11,16 +11,19 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+"
+    "url": "git+https://github.com/chloeeee72/count-days"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "@typescript-eslint/parser": "^4.0.1",
-    "eslint": "^7.8.0"
+    "eslint": "^7.8.0",
+    "dayjs": "^1.11.2",
+    "typescript": "^4.0.2"
   },
   "keywords": [
-    "hexo",
-    "hexo-img-beautify"
+    "dayjs",
+    "js",
+    "count-days"
   ],
   "author": "chloe",
   "license": "MIT",
@@ -33,5 +36,14 @@
   "homepage": "https://github.com/chloeeee72/count-days",
   "dependencies": {
     "dayjs": "^1.11.2"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.md": [
+      "lint-md --fix"
+    ]
   }
 }
