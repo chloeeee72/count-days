@@ -39,7 +39,7 @@ sumDays(data) // 42 days in total
 
 - days: `Array<Number>`, count days in each object.[12,24,05,05,....]
 
-- ...
+- optimize sumDays
 
 
 
