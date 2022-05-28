@@ -1,15 +1,13 @@
 {
   "name": "count-days",
-  "version": "0.1.9",
+  "version": "0.2.1",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "description": "js count days",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "files": [
-    "dist/**/*"
-  ],
+  "files": ["*"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chloeeee72/count-days"
@@ -38,7 +36,6 @@
   },
   "homepage": "https://github.com/chloeeee72/count-days",
   "dependencies": {
-    "count-days": "^0.1.0",
     "dayjs": "^1.11.2"
   }
 }
