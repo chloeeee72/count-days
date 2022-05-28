@@ -19,6 +19,8 @@ github: [click to check](https://www.npmjs.com/package/count-days)
 
 ```js
 var sumDays = require('count-days')
+// or
+import sumDays from 'count-days'
 
 const data = [
   { startDate: '2022-05-12', endDate: '2022-05-25' }, // 13 days

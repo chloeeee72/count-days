@@ -1,7 +1,8 @@
 {
   "name": "count-days",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "description": "js count days",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
