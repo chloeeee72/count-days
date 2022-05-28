@@ -1,8 +1,8 @@
 {
   "name": "count-days",
-  "version": "0.1.2",
+  "version": "0.1.9",
   "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "typings": "lib/index.d.ts",
   "description": "js count days",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,8 +17,8 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "@typescript-eslint/parser": "^4.0.1",
-    "eslint": "^7.8.0",
     "dayjs": "^1.11.2",
+    "eslint": "^7.8.0",
     "typescript": "^4.0.2"
   },
   "keywords": [
@@ -38,15 +38,7 @@
   },
   "homepage": "https://github.com/chloeeee72/count-days",
   "dependencies": {
+    "count-days": "^0.1.0",
     "dayjs": "^1.11.2"
-  },
-  "lint-staged": {
-    "*.ts": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.md": [
-      "lint-md --fix"
-    ]
   }
 }
