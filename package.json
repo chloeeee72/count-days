@@ -23,7 +23,9 @@
   "keywords": [
     "dayjs",
     "js",
-    "count-days"
+    "count-days",
+    "react",
+    "vue"
   ],
   "author": "chloe",
   "license": "MIT",
