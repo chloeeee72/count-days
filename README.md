@@ -18,38 +18,75 @@ github: [click to check](https://www.npmjs.com/package/count-days)
 ### How to use
 
 ```js
-var sumDays = require('count-days')
+var sumDate = require('count-days')
 // or
-import sumDays from 'count-days'
+import sumDate from 'count-days'
+```
 
-const data = [
-  { startDate: '2022-05-12', endDate: '2022-05-25' }, // 13 days
-  { startDate: '2022-05-15', endDate: '2022-06-08' }, // 24 days
-  { startDate: '2022-06-15', endDate: '2022-06-20' }, // 05 days
-  { startDate: '2022-06-10', endDate: '2022-06-25' }, // 05 days
-]
+- Function `sumDate`, accept a Array, return a Number of sum days:
 
-sumDays(data) // 42 days in total
+```js
+  sumDate([
+    { startDate:'2022-05-12', endDate:'2022-06-08' },
+    {...},
+    // more Object
+  ])
+
+  // example:
+  sumDate([
+    { startDate: '2022-06-01', endDate: '2022-06-08' }, // 7
+    { startDate: '2022-05-12', endDate: '2022-05-12' }, // 2
+  ]);
+  // 9
+```
+
+- Function `allDateList`, accept a Array, return Array of all date:
+
+```js
+  allDateList([
+    { startDate:'2022-05-12', endDate:'2022-06-08' },
+    {...},
+    // more Object
+  ]) 
+
+  // example:
+  allDateList([
+    { startDate: '2022-06-01', endDate: '2022-06-08' }, // 7
+    { startDate: '2022-05-12', endDate: '2022-05-12' }, // 2
+  ]);
+  // ["2022-05-12", "2022-06-01", "2022-06-02", "2022-06-03", "2022-06-04", "2022-06-05", "2022-06-06", "2022-06-07", "2022-06-08"]
 ```
 
 ### Api
 
-- Function `sumData`, accept a Array:
+#### params 
 
-```js
-  [
-    { startDate:'', endDate:'' },
-    {...},
-    // more Object
-  ]
-```
+|  params   | type  | default | description |
+|  ----  | ----  |  ---  | ---  |
+| options  | DurationOptionsList | - | - | 
+
+#### DurationOptionsList
+
+|  params   | type  | default | description |
+|  ----  | ----  |  ---  | ---  |
+| startTime  | string / number / Date / Dayjs / null /undefined | - | - | 
+| endTime    | string / number / Date / Dayjs / null /undefined | - | - | 
+
+#### Function `sumDate`
+
+Accept a `Array`, type is DurationOptionsList, return a `Number` of sum days
+
+#### Function `allDateList`
+
+Accept a `Array`, type is DurationOptionsList, return a `Array` of all date sting
+
 ### TODO
 
-- allDaysList: `Array<String>`, includes all days between all startDate and endDate
+- [√] **22/06/15 update**: allDateList: `Array<String>`, includes all days in the data
 
-- days: `Array<Number>`, count days in each object.[12,24,05,05,....]
+- objectSumDate: `Array<Number>`, count days in each object.like:[12,24,05,05,....]
 
-- optimize sumDays
+- optimize sumDate
 
 
 
