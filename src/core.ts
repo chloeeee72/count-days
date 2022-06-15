@@ -54,7 +54,7 @@ function getDateArray(arr: Array<DurationOptionsList>) {
   if (arr.length === 0) {
     return [];
   }
-  const { orderTimes }: Array<number> = dataFormatter(arr);
+  const { orderTimes }: any = dataFormatter(arr);
   // Determine if time is continuous or not，return a new array
   const allDatesList: Array<string | number | ConfigType> = getAllDateList(orderTimes);
   // Truncate the resulting array to a new array of length 2, 
@@ -88,7 +88,7 @@ function dataFormatter(arr: Array<DurationOptionsList>) {
   // To timestamp，Quick sort, put earlier time first
   const times: Array<number> = onlyDates.map((item) => new Date(item).getTime());
   const orderTimes: Array<number> = hurryShift(times);
-  const orderDates: Array<number> = orderTimes.map((item) =>
+  const orderDates: Array<string> = orderTimes.map((item) =>
     dayjs(item).format('YYYY-MM-DD')
   );
   return { orderDates, orderTimes };

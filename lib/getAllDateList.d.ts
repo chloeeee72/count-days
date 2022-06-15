@@ -3,6 +3,6 @@ export interface objectProp {
   endDate: string;
 }
 
-declare function allDateList (dateList: Array<objectProp>): number;
+declare function allDateList (dateList: Array<objectProp>): Array<string>;
 
 export default allDateList;
