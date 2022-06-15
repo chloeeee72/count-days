@@ -65,7 +65,7 @@ import sumDate from 'count-days'
 |  ----  | ----  |  ---  | ---  |
 | options  | DurationOptionsList | - | - | 
 
-####　DurationOptionsList
+#### DurationOptionsList
 
 |  params   | type  | default | description |
 |  ----  | ----  |  ---  | ---  |
