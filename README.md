@@ -69,8 +69,8 @@ import sumDate from 'count-days'
 
 |  params   | type  | default | description |
 |  ----  | ----  |  ---  | ---  |
-| startTime  | string / number / Date / Dayjs / null /undefined | - | - | 
-| endTime    | string / number / Date / Dayjs / null /undefined | - | - | 
+| startTime  | string / Date / Dayjs / null /undefined | - | - | 
+| endTime    | string / Date / Dayjs / null /undefined | - | - | 
 
 #### Function `sumDate`
 
@@ -80,14 +80,8 @@ Accept a `Array`, type is DurationOptionsList, return a `Number` of sum days
 
 Accept a `Array`, type is DurationOptionsList, return a `Array` of all date sting
 
-### TODO
+### TODO & UPDATE
 
-- [√] **22/06/15 update**: allDateList: `Array<String>`, includes all days in the data
-
+- [√] **22/06/15 update**: allDateList: `Array<String>`, includes all days in the data，optimize sumDate
+- [√] **22/06/16 update least version 0.2.7**: use Rollup to packing
 - objectSumDate: `Array<Number>`, count days in each object.like:[12,24,05,05,....]
-
-- optimize sumDate
-
-
-
-
