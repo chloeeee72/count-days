@@ -13,7 +13,7 @@ export type DurationOptionsList = {
  * @param {*} endDate 
  * @returns array of days
  */
-function makeDateBetweenArr(startDate: ConfigType, endDate: ConfigType) {
+function makeDateBetweenArr(startDate: string | number, endDate: string | number) {
   let dates: Array<string> = [];
   const theDate = new Date(startDate);
   while (theDate < new Date(endDate)) {
@@ -25,7 +25,7 @@ function makeDateBetweenArr(startDate: ConfigType, endDate: ConfigType) {
 }
 
 // Quick sort
-function hurryShift(arr) {
+const hurryShift = (arr: Array<number>): Array<number> => {
   if (arr.length === 1 || arr.length === 0) {
     return arr;
   }
@@ -58,9 +58,9 @@ function getDateArray(arr: Array<DurationOptionsList>) {
   // Determine if time is continuous or not，return a new array
   const allDatesList: Array<string | number | ConfigType> = getAllDateList(orderTimes);
   // Truncate the resulting array to a new array of length 2, 
-  // the first value is the startDate 
+  // the first value is the startDate
   // and the second value is the endDate
-  let result: Array<Array<string>> = [];
+  let result: Array<any> = [];
   if (allDatesList.length > 0) {
     let index = 0;
     let resIndex = 0;
@@ -74,7 +74,7 @@ function getDateArray(arr: Array<DurationOptionsList>) {
 
 function dataFormatter(arr: Array<DurationOptionsList>) {
   // completion date
-  const dates = arr.map((item) =>
+  const dates = arr.map((item: any) =>
     makeDateBetweenArr(item.startDate, item.endDate)
   );
   // push to a new array

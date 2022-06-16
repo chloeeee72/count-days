@@ -3,7 +3,7 @@ import dayjs from "dayjs";
 import { getDateArray, DurationOptionsList } from "./core";
 
 // get sum days
-function sumDate(options: Array<DurationOptionsList>) {
+export const sumDate = (options: Array<DurationOptionsList>) => {
   let data = getDateArray(options)
   let count = 0;
   for (let i = 0; i < data.length; i++) {
@@ -12,4 +12,3 @@ function sumDate(options: Array<DurationOptionsList>) {
   return count;
 };
 
-export { sumDate }

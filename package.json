@@ -1,23 +1,18 @@
 {
   "name": "count-days",
-  "version": "0.2.3",
-  "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
+  "version": "0.2.6",
+  "main": "lib/bundle.cjs.js",
+  "module": "lib/bundle.esm.js",
+  "types": "lib/index.d.ts",
   "description": "js count days",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf lib/*",
+    "build": "npx rollup -c && npm run build:types",
+    "build:types": "npx tsc"
   },
-  "files": ["*"],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chloeeee72/count-days"
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.0.1",
-    "@typescript-eslint/parser": "^4.0.1",
-    "dayjs": "^1.11.2",
-    "eslint": "^7.8.0",
-    "typescript": "^4.0.2"
+    "url": "git+https://github.com/chloeeee72/count-days.git"
   },
   "keywords": [
     "dayjs",
@@ -28,13 +23,21 @@
   ],
   "author": "chloe",
   "license": "MIT",
-  "directories": {
-    "lib": "lib"
-  },
   "bugs": {
     "url": "https://github.com/chloeeee72/count-days"
   },
   "homepage": "https://github.com/chloeeee72/count-days",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.2",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-typescript": "^8.3.1",
+    "dayjs": "^1.11.2",
+    "rollup": "^2.68.6",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.4.0",
+    "typescript": "^4.5.5"
+  },
   "dependencies": {
     "dayjs": "^1.11.2"
   }
